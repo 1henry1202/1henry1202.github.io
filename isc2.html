@@ -1,26 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rancho Cyber • ISC2</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rancho Cyber – ISC2</title>
+<link rel="stylesheet" href="style.css?v=1755324129"/></head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Rancho Cyber • ISC2</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="isc2.html">ISC2</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="competitions.html">Competitions</a></li>
+
+<header class="header">
+  <div class="navbar">
+    <a href="index.html" class="logo">Rancho Cyber • ISC2</a>
+    <input type="checkbox" id="side-menu" class="side-menu"/>
+    <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a id="nav-home" href="index.html">Home</a></li>
+        <li><a id="nav-isc2" href="isc2.html">ISC2</a></li>
+        <li><a id="nav-resources" href="resources.html">Resources</a></li>
+        <li><a id="nav-competitions" href="competitions.html">Competitions</a></li>
       </ul>
     </nav>
-  </header>
-  <main>
-    <h1>About ISC2</h1>
-    <p>(ISC)² is one of the most renowned cybersecurity certification bodies. Its CISSP credential is considered the “gold standard” worldwide.</p>
-  </main>
-</body>
-</html>
+  </div>
+</header>
+
+<main>
+  <h1>ISC2 Pathway</h1>
+  <p class="lead">From entry‑level CC to advanced SSCP, CISSP, and CCSP—what they are, why they matter, and how to prepare.</p>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>What is ISC2?</h3>
+      <p>ISC2 is a global leader in cybersecurity certifications. Its credentials validate structured knowledge and real‑world practice.</p>
+      <ul>
+        <li>Respected by employers and governments worldwide</li>
+        <li>Clear ladder from entry to leadership</li>
+      </ul>
+      <p><a href="https://www.isc2.org/" target="_blank" rel="noopener">isc2.org</a></p>
+    </div>
+    <div class="card">
+      <h3>Core Certifications</h3>
+      <ul>
+        <li><strong>CC</strong> — Certified in Cybersecurity (no experience required)</li>
+        <li><strong>SSCP</strong> — Operations & system hardening</li>
+        <li><strong>CISSP</strong> — Broad leadership/architecture (“gold standard”)</li>
+        <li><strong>CCSP</strong> — Cloud security (AWS/Azure/GCP)</li>
+      </ul>
+      <p><a href="https://www.isc2.org/landing/entry-level-cybersecurity-certification" target="_blank" rel="noopener">Free CC Training</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <span>Built for students by Henry • <a href="competitions.html#practice">Weekly practice plan</a></span>
+    <span>Questions? <a href="mailto:1henrydeng@gmail.com">1henrydeng@gmail.com</a></span>
+  </div>
+</footer>
+<script>
+(function(){{
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const map = {{'index.html':'nav-home','isc2.html':'nav-isc2','resources.html':'nav-resources','competitions.html':'nav-competitions'}};
+  const id = map[file] || 'nav-home';
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}})();
+</script>
+
+</body></html>

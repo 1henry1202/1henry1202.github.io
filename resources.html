@@ -1,26 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rancho Cyber • Resources</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rancho Cyber – Resources</title>
+<link rel="stylesheet" href="style.css?v=1755324129"/></head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Rancho Cyber • ISC2</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="isc2.html">ISC2</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="competitions.html">Competitions</a></li>
+
+<header class="header">
+  <div class="navbar">
+    <a href="index.html" class="logo">Rancho Cyber • ISC2</a>
+    <input type="checkbox" id="side-menu" class="side-menu"/>
+    <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a id="nav-home" href="index.html">Home</a></li>
+        <li><a id="nav-isc2" href="isc2.html">ISC2</a></li>
+        <li><a id="nav-resources" href="resources.html">Resources</a></li>
+        <li><a id="nav-competitions" href="competitions.html">Competitions</a></li>
       </ul>
     </nav>
-  </header>
-  <main>
-    <h1>Cybersecurity Resources</h1>
-    <p>Find practice labs, tutorials, guides, and references to strengthen your skills in cybersecurity.</p>
-  </main>
-</body>
-</html>
+  </div>
+</header>
+
+<main>
+  <h1>Resources</h1>
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>Hands‑on labs</h3>
+      <ul>
+        <li><a href="https://tryhackme.com" target="_blank" rel="noopener">TryHackMe</a> — guided labs</li>
+        <li><a href="https://www.hackthebox.com" target="_blank" rel="noopener">Hack The Box</a> — realistic boxes</li>
+        <li><a href="https://overthewire.org/wargames/" target="_blank" rel="noopener">OverTheWire</a> — Linux & networking</li>
+        <li><a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Academy</a> — web security</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Reading & tools</h3>
+      <ul>
+        <li><a href="https://www.cisa.gov/resources-tools" target="_blank" rel="noopener">CISA resources</a></li>
+        <li><a href="https://www.sans.org/blog/" target="_blank" rel="noopener">SANS blog</a></li>
+        <li><a href="https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security" target="_blank" rel="noopener">NCSC 10 steps</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <span>Built for students by Henry • <a href="competitions.html#practice">Weekly practice plan</a></span>
+    <span>Questions? <a href="mailto:1henrydeng@gmail.com">1henrydeng@gmail.com</a></span>
+  </div>
+</footer>
+<script>
+(function(){{
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const map = {{'index.html':'nav-home','isc2.html':'nav-isc2','resources.html':'nav-resources','competitions.html':'nav-competitions'}};
+  const id = map[file] || 'nav-home';
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}})();
+</script>
+
+</body></html>
