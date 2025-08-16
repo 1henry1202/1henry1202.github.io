@@ -1,25 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rancho Cyber – What will we do?</title>
+  <link rel="stylesheet" href="style.css?v=1755314998" />
 </head>
-<body>
-  
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="isc2.html">ISC2</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li><a href="competitions.html">Competitions</a></li>
-  </ul>
-</nav>
+<body data-page="home">
+  <nav>
+    <div class="container nav-inner">
+      <div class="brand">Rancho Cyber</div>
+      <div class="links">
+        <a id="nav-home" href="index.html">Home</a>
+        <a id="nav-competitions" href="competitions.html">Competitions</a>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <h1>Welcome to Rancho Cyber Team</h1>
-    <p>We are a cybersecurity club representing our school and district in competitions.</p>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="kicker">What will we do?</div>
+        <h1 class="big">Will represent the school and the district in multiple competitions: SoCal Cyber Cup, CyberPatriot.</h1>
+        <p class="lead">We train together, learn by doing, and compete with integrity. Explore the competitions to see what skills you'll build and how to join.</p>
+        <div class="cta">
+          <a class="btn" href="competitions.html">Explore competitions</a>
+          <a class="btn outline" href="https://www.uscyberpatriot.org/" target="_blank">CyberPatriot</a>
+        </div>
+      </div>
+      <div><img src="images/hero_security.jpg" alt="Cybersecurity" /></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Why join</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Build real skills</h3>
+        <ul class="list">
+          <li>Windows/Linux hardening • user & policy management</li>
+          <li>Network basics • VPN • firewall • secure configs</li>
+          <li>Web & scripting fundamentals • teamwork</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Compete & grow</h3>
+        <ul class="list">
+          <li>Friendly scrimmages → official online rounds</li>
+          <li>Coach/mentor guidance and weekly practice</li>
+          <li>Resume‑ready experience + community impact</li>
+        </ul>
+      </div>
+    </div>
   </main>
+
+  <footer>
+    <div class="container foot">
+      <span>© 2025 Rancho Cyber</span>
+      <span>Built for students by students</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-home').classList.add('active');
+  </script>
 </body>
 </html>
