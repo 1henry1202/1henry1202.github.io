@@ -2,7 +2,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Rancho Cyber – Home</title>
-<link rel="stylesheet" href="style.css?v=1755324129"/></head>
+<link rel="stylesheet" href="style.css"/></head>
 <body>
 
 <header class="header">
@@ -22,20 +22,73 @@
 </header>
 
 <main>
-  <h1>Welcome to Rancho Cyber Team</h1>
-  <p class="lead">We represent our school & district in cybersecurity competitions and build real-world defensive skills.</p>
-  <div class="grid cols-2">
+  <!-- Hero -->
+  <div class="card" style="background:linear-gradient(135deg, rgba(11,61,145,.10), rgba(13,27,42,.06));">
+    <h1>Cybersecurity • Built for Students</h1>
+    <p class="lead">Hands‑on labs, real competitions, and a clear path to <strong>ISC2</strong> certifications.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+      <a href="resources.html" style="background:#0b3d91;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:800;display:inline-block">Start learning</a>
+      <a href="isc2.html" style="background:#fff;color:#0b3d91;border:1px solid var(--border);text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:800;display:inline-block">ISC2 pathway</a>
+    </div>
+  </div>
+
+  <!-- 3-up highlights -->
+  <div class="grid cols-2" style="grid-template-columns:repeat(3,1fr);gap:16px">
     <div class="card">
-      <h3>Start here</h3>
-      <p>Explore certifications, hands‑on labs, and competitions. No experience required.</p>
+      <h3>Beginner friendly</h3>
+      <p class="lead">No experience required — we start with OS, networking, and security basics.</p>
     </div>
     <div class="card">
-      <h3>Quick links</h3>
+      <h3>Train every week</h3>
+      <p class="lead">Short, focused sessions and scrimmages so you keep improving.</p>
+    </div>
+    <div class="card">
+      <h3>Build your portfolio</h3>
+      <p class="lead">Collect lab notes, configs, and write‑ups to show real progress.</p>
+    </div>
+  </div>
+
+  <!-- Split sections -->
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>Competitions</h3>
+      <p class="lead">CyberPatriot & SoCal Cyber Cup—team defense, forensics, and strategy.</p>
       <ul>
-        <li><a href="isc2.html">ISC2 pathway (CC → SSCP → CISSP)</a></li>
-        <li><a href="resources.html">Learning resources</a></li>
-        <li><a href="competitions.html">SoCal Cyber Cup & CyberPatriot</a></li>
+        <li>Defend Windows/Linux VMs</li>
+        <li>Analyze logs & harden services</li>
+        <li>Practice weekly, scrimmage monthly</li>
       </ul>
+      <p style="margin-top:8px"><a href="competitions.html">See details</a></p>
+    </div>
+    <div class="card">
+      <h3>Weekly practice plan</h3>
+      <ul>
+        <li>Mon — Linux/Windows fundamentals</li>
+        <li>Wed — Network & services hardening</li>
+        <li>Fri — Forensics & incident response drills</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Resources & Certifications -->
+  <div class="grid cols-2">
+    <div class="card">
+      <h3>Top learning resources</h3>
+      <ul>
+        <li><a href="https://tryhackme.com" target="_blank" rel="noopener">TryHackMe</a> — guided labs</li>
+        <li><a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Academy</a> — web security</li>
+        <li><a href="https://overthewire.org/wargames/" target="_blank" rel="noopener">OverTheWire</a> — Linux & networking</li>
+      </ul>
+      <p style="margin-top:8px"><a href="resources.html">More resources</a></p>
+    </div>
+    <div class="card">
+      <h3>Certifications (ISC2)</h3>
+      <ul>
+        <li>CC — Certified in Cybersecurity</li>
+        <li>SSCP — Systems Security Certified Practitioner</li>
+        <li>CISSP — Gold‑standard for leaders</li>
+      </ul>
+      <p style="margin-top:8px"><a href="isc2.html">See ISC2 pathway</a></p>
     </div>
   </div>
 </main>
@@ -47,13 +100,12 @@
   </div>
 </footer>
 <script>
-(function(){{
+(function(){
   const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  const map = {{'index.html':'nav-home','isc2.html':'nav-isc2','resources.html':'nav-resources','competitions.html':'nav-competitions'}};
-  const id = map[file] || 'nav-home';
+  const id = {'index.html':'nav-home','isc2.html':'nav-isc2','resources.html':'nav-resources','competitions.html':'nav-competitions'}[file] || 'nav-home';
   const el = document.getElementById(id);
   if (el) el.classList.add('active');
-}})();
+})();
 </script>
 
 </body></html>
