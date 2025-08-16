@@ -3,65 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rancho Cyber – Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Rancho Cyber – What will we do?</title>
+  <link rel="stylesheet" href="style.css?v=1755314998" />
 </head>
-<body>
+<body data-page="home">
   <nav>
     <div class="container nav-inner">
       <div class="brand">Rancho Cyber</div>
       <div class="links">
-        <a href="index.html">Home</a>
-        <a href="isc2.html">ISC2</a>
-        <a href="resources.html">Resources</a>
+        <a id="nav-home" href="index.html">Home</a>
+        <a id="nav-competitions" href="competitions.html">Competitions</a>
       </div>
     </div>
   </nav>
 
+  <header class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="kicker">What will we do?</div>
+        <h1 class="big">Will represent the school and the district in multiple competitions: SoCal Cyber Cup, CyberPatriot.</h1>
+        <p class="lead">We train together, learn by doing, and compete with integrity. Explore the competitions to see what skills you'll build and how to join.</p>
+        <div class="cta">
+          <a class="btn" href="competitions.html">Explore competitions</a>
+          <a class="btn outline" href="https://www.uscyberpatriot.org/" target="_blank">CyberPatriot</a>
+        </div>
+      </div>
+      <div><img src="images/hero_security.jpg" alt="Cybersecurity" /></div>
+    </div>
+  </header>
+
   <main class="container">
-    <h1>Rancho Cyber Team</h1>
-    <p class="lead">We are young people who love the Internet and want to protect the Internet we use from hackers.</p>
-
-    <div class="section">
-      <div class="card row">
-        <div class="img"><img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=1200&auto=format&fit=crop" alt="Our Team" /></div>
-        <div>
-          <h3>Our Team</h3>
-          <p class="small">We’re a student-led cybersecurity club focusing on safe computing, ethical hacking, and digital citizenship.</p>
-        </div>
-      </div>
-
-      <div class="card row">
-        <div class="img"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Join the club" /></div>
-        <div>
-          <h3>Why do you need to join us</h3>
-          <p class="small">As technology touches every part of life, learning to navigate the online world safely is essential. By joining, you’ll build practical security skills that protect yourself and others and lay the foundation for future tech careers.</p>
-        </div>
-      </div>
-
-      <div class="card row">
-        <div class="img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="How this helps" /></div>
-        <div>
-          <h3>How does this help you?</h3>
-          <p class="small">You’ll learn to approach computer problems like a pro: think like a (good) hacker, uncover hidden stories in data, and analyze information like a security detective. Keep yourself and your school safe online.</p>
-        </div>
-      </div>
-
-      <div class="card row">
-        <div class="img"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="We are valued" /></div>
-        <div>
-          <h3>We are valued</h3>
-          <p class="small">We are the only team of this kind in the school district. First competition: excellent results! 🎉</p>
-        </div>
-      </div>
-
+    <h2 class="section-title">Why join</h2>
+    <div class="grid cols-2">
       <div class="card">
-        <h3>What should you do if you encounter a hacker?</h3>
-        <p class="small">Join our club and you will learn more! Always report incidents to a trusted adult or the IT department.</p>
-        <div class="btns">
-          <a class="btn" href="resources.html">Start learning</a>
-          <a class="btn secondary" href="isc2.html">About ISC2</a>
-        </div>
+        <h3>Build real skills</h3>
+        <ul class="list">
+          <li>Windows/Linux hardening • user & policy management</li>
+          <li>Network basics • VPN • firewall • secure configs</li>
+          <li>Web & scripting fundamentals • teamwork</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Compete & grow</h3>
+        <ul class="list">
+          <li>Friendly scrimmages → official online rounds</li>
+          <li>Coach/mentor guidance and weekly practice</li>
+          <li>Resume‑ready experience + community impact</li>
+        </ul>
       </div>
     </div>
   </main>
@@ -72,5 +60,9 @@
       <span>Built for students by students</span>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('nav-home').classList.add('active');
+  </script>
 </body>
 </html>
