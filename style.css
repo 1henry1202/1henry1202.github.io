@@ -32,80 +32,86 @@ h1{margin:0 0 8px}.lead{color:var(--muted)}
 footer{border-top:1px solid var(--border);margin-top:26px;background:#fff}
 .foot{max-width:1100px;margin:0 auto;padding:14px 16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#334155}
 .foot a{color:#0b3d91;text-decoration:none;font-weight:700}
-<h2 id="practice" class="neo-title">Weekly Practice Plan</h2>
-<p class="inline-note">Specific plans will be discussed offline（具体排程线下讨论确认）。下列为公开版训练框架，保留你现有的 Mon/Wed/Fri 主线，并加入更多每日内容与演练主题。</p>
+  --neo1:#00d1ff;    /* cyan neon */
+  --neo2:#7c3aed;    /* violet neon */
+  --neo3:#14f195;    /* green neon */
+  --panel:#0a0f1f;   /* deep panel */
+  --grid:#0b1229;    /* card bg alt */
+}
 
-<div class="week-grid">
-  <!-- Monday -->
-  <section class="week-day">
-    <h4>Mon • Fundamentals & Hardening <span class="badge">Windows / Linux</span></h4>
-    <ul class="checklist">
-      <li>Windows & Linux 基础：用户/组、权限、服务、日志</li>
-      <li>基线加固：更新策略、UAC/Firewall、SSH/WinRM</li>
-      <li>练习镜像：Win10/11、Ubuntu（VirtualBox/VMware）</li>
-    </ul>
-    <div class="meta">Keep from original: “Linux/Windows fundamentals”</div>
-  </section>
+body{
+  background:
+    radial-gradient(1200px 600px at 90% -10%, rgba(124,58,237,.12), transparent 60%),
+    radial-gradient(1200px 800px at -10% 110%, rgba(0,209,255,.10), transparent 60%),
+    var(--bg);
+}
 
-  <!-- Tuesday -->
-  <section class="week-day">
-    <h4>Tue • Blue Team Labs <span class="badge">Detection</span></h4>
-    <ul class="checklist">
-      <li>事件日志与监控：Sysmon + Windows Event、journalctl</li>
-      <li>网络抓包：Wireshark 快速定位高危流量</li>
-      <li>实操：给定 IOC 列表，完成入侵轨迹复原</li>
-    </ul>
-  </section>
+.holo-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(2,6,23,.25);
+  backdrop-filter: blur(6px);
+}
+.holo-card::before{
+  content:"";
+  position:absolute; inset:-2px;
+  background: conic-gradient(from 0deg, var(--neo1), var(--neo2), var(--neo3), var(--neo1));
+  filter: blur(18px); opacity:.18;
+  z-index:-1;
+}
 
-  <!-- Wednesday -->
-  <section class="week-day">
-    <h4>Wed • Network & Services <span class="badge">TCP/IP</span></h4>
-    <ul class="checklist">
-      <li>端口/服务：SSH/Samba/HTTP/DB 常见误配修复</li>
-      <li>FW/路由：UFW、Windows Defender FW、NAT、ACL</li>
-      <li>工具：nmap、netstat、ss、PowerShell Net*</li>
-    </ul>
-    <div class="meta">Keep from original: “Network & services”</div>
-  </section>
+.neo-title{
+  font-weight: 900;
+  letter-spacing:.4px;
+  background: linear-gradient(90deg, var(--neo1), var(--neo2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
 
-  <!-- Thursday -->
-  <section class="week-day">
-    <h4>Thu • Web Security Sprint <span class="badge">OWASP</span></h4>
-    <ul class="checklist">
-      <li>常见漏洞：SQLi、XSS、IDOR、SSRF、Auth Bypass</li>
-      <li>实验：PortSwigger Labs 挑战打卡（分组）</li>
-      <li>加分：写 1 条可复现漏洞的 PoC 与防护建议</li>
-    </ul>
-  </section>
+.badge{
+  display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.2); color:#e2e8f0; opacity:.9;
+}
 
-  <!-- Friday -->
-  <section class="week-day">
-    <h4>Fri • Forensics & IR <span class="badge">Triage</span></h4>
-    <ul class="checklist">
-      <li>内存/磁盘取证：Volatility、Strings、SIGMA 规则</li>
-      <li>Windows 工具：Sysinternals（Autoruns、TCPView）</li>
-      <li>CTI：基于 MITRE ATT&CK 归因与处置单编写</li>
-    </ul>
-    <div class="meta">Keep from original: “Forensics & IR drills”</div>
-  </section>
+.week-grid{ display:grid; gap:16px }
+@media(min-width:880px){ .week-grid{ grid-template-columns: repeat(3, 1fr) } }
+@media(min-width:1180px){ .week-grid{ grid-template-columns: repeat(4, 1fr) } }
 
-  <!-- Saturday -->
-  <section class="week-day">
-    <h4>Sat • Red vs Blue Scrimmage <span class="badge">Teamplay</span></h4>
-    <ul class="checklist">
-      <li>模拟赛：硬化镜像 + 逐步投放 IOC，蓝队实时处置</li>
-      <li>红队仅限低风险技巧（合法授权的弱口令/目录探测）</li>
-      <li>复盘：评分表（得分、SLA、误报/漏报率）</li>
-    </ul>
-  </section>
+.week-day{
+  display:flex; flex-direction:column; gap:10px;
+  background: linear-gradient(180deg, rgba(11,18,41,.9), rgba(11,18,41,.7));
+  border:1px solid rgba(0,209,255,.18);
+  border-radius:14px; padding:14px;
+}
+.week-day h4{ margin:0; color:#e5edff }
+.week-day .meta{ font-size:12px; color:#a5b4fc }
 
-  <!-- Sunday -->
-  <section class="week-day">
-    <h4>Sun • Review & Knowledge Base <span class="badge">Docs</span></h4>
-    <ul class="checklist">
-      <li>本周错题本：题单、命令速查、排错流程图</li>
-      <li>知识库：将 SOP / Playbook 推送到团队仓库</li>
-      <li>轻量讨论会：仅发布下周关键目标（细节线下）</li>
-    </ul>
-  </section>
-</div>
+.checklist{ margin:0; padding-left:18px }
+.checklist li{ margin:6px 0 }
+
+.inline-note{
+  margin: 8px 0 2px;
+  font-size: 12px; color:#93c5fd;
+  border-left:2px solid var(--neo1); padding-left:8px;
+}
+
+.resource-grid{ display:grid; gap:16px }
+@media(min-width:880px){ .resource-grid{ grid-template-columns: repeat(2,1fr) } }
+@media(min-width:1180px){ .resource-grid{ grid-template-columns: repeat(3,1fr) } }
+
+.resource-card{
+  display:grid; grid-template-columns:72px 1fr; gap:12px; align-items:start;
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:14px; padding:12px;
+}
+.resource-card img{
+  width:72px; height:72px; object-fit:cover; border-radius:10px;
+  border:1px solid rgba(255,255,255,.18);
+}
+.resource-card a{ font-weight:800; text-decoration:none }
+.resource-card p{ margin:6px 0 0; color:#cbd5e1; font-size:14px }
+
