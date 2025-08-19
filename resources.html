@@ -1,63 +1,68 @@
-<!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rancho Cyber – Resources</title>
-<link rel="stylesheet" href="style.css?v=1755324129"/></head>
-<body>
+<h1 class="neo-title">Resources</h1>
 
-<header class="header">
-  <div class="navbar">
-    <a href="index.html" class="logo">Rancho Cyber • ISC2</a>
-    <input type="checkbox" id="side-menu" class="side-menu"/>
-    <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
-    <nav class="nav">
-      <ul class="menu">
-        <li><a id="nav-home" href="index.html">Home</a></li>
-        <li><a id="nav-isc2" href="isc2.html">ISC2</a></li>
-        <li><a id="nav-resources" href="resources.html">Resources</a></li>
-        <li><a id="nav-competitions" href="competitions.html">Competitions</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<p class="inline-note">每个资源附带一段用途说明与图标，方便新人快速理解与选择。图片路径可放在 <code>/assets/</code> 下。</p>
 
-<main>
-  <h1>Resources</h1>
-  <div class="grid cols-2">
-    <div class="card">
-      <h3>Hands‑on labs</h3>
-      <ul>
-        <li><a href="https://tryhackme.com" target="_blank" rel="noopener">TryHackMe</a> — guided labs</li>
-        <li><a href="https://www.hackthebox.com" target="_blank" rel="noopener">Hack The Box</a> — realistic boxes</li>
-        <li><a href="https://overthewire.org/wargames/" target="_blank" rel="noopener">OverTheWire</a> — Linux & networking</li>
-        <li><a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Academy</a> — web security</li>
-      </ul>
+<div class="resource-grid">
+  <!-- TryHackMe -->
+  <article class="resource-card holo-card">
+    <img src="assets/tryhackme.png" alt="TryHackMe logo"/>
+    <div>
+      <a href="https://tryhackme.com" target="_blank" rel="noopener">TryHackMe</a>
+      <p>循序渐进的引导式实验室，适合入门到中级，覆盖网络、Web 安全、取证、云等模块，配合日常打卡提升手感。</p>
     </div>
-    <div class="card">
-      <h3>Reading & tools</h3>
-      <ul>
-        <li><a href="https://www.cisa.gov/resources-tools" target="_blank" rel="noopener">CISA resources</a></li>
-        <li><a href="https://www.sans.org/blog/" target="_blank" rel="noopener">SANS blog</a></li>
-        <li><a href="https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security" target="_blank" rel="noopener">NCSC 10 steps</a></li>
-      </ul>
+  </article>
+
+  <!-- Hack The Box -->
+  <article class="resource-card holo-card">
+    <img src="assets/hackthebox.png" alt="Hack The Box logo"/>
+    <div>
+      <a href="https://www.hackthebox.com" target="_blank" rel="noopener">Hack The Box</a>
+      <p>更贴近实战的靶机平台，适合进阶练习与团队赛前热身，强调信息收集、权限提升与持久化链路。</p>
     </div>
-  </div>
-</main>
+  </article>
 
-<footer>
-  <div class="foot">
-    <span>Built for students by Henry • <a href="competitions.html#practice">Weekly practice plan</a></span>
-    <span>Questions? <a href="mailto:1henrydeng@gmail.com">1henrydeng@gmail.com</a></span>
-  </div>
-</footer>
-<script>
-(function(){{
-  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-  const map = {{'index.html':'nav-home','isc2.html':'nav-isc2','resources.html':'nav-resources','competitions.html':'nav-competitions'}};
-  const id = map[file] || 'nav-home';
-  const el = document.getElementById(id);
-  if (el) el.classList.add('active');
-}})();
-</script>
+  <!-- OverTheWire -->
+  <article class="resource-card holo-card">
+    <img src="assets/overthewire.png" alt="OverTheWire logo"/>
+    <div>
+      <a href="https://overthewire.org/wargames/" target="_blank" rel="noopener">OverTheWire</a>
+      <p>经典 Linux & 网络基础闯关（如 Bandit），强化命令行与思维方式，为系统加固与排错打下底座。</p>
+    </div>
+  </article>
 
-</body></html>
+  <!-- PortSwigger Academy -->
+  <article class="resource-card holo-card">
+    <img src="assets/portswigger.png" alt="PortSwigger Academy logo"/>
+    <div>
+      <a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Academy</a>
+      <p>Web 安全权威教程与实验（OWASP Top 10 全覆盖），从基础到高级漏洞利用与防御策略。</p>
+    </div>
+  </article>
+
+  <!-- CISA -->
+  <article class="resource-card holo-card">
+    <img src="assets/cisa.png" alt="CISA resources"/>
+    <div>
+      <a href="https://www.cisa.gov/resources-tools" target="_blank" rel="noopener">CISA Resources</a>
+      <p>美国网络安全与基础设施安全局官方工具与指南，涵盖应急响应、基线加固和行业最佳实践。</p>
+    </div>
+  </article>
+
+  <!-- SANS Blog -->
+  <article class="resource-card holo-card">
+    <img src="assets/sans.png" alt="SANS Blog"/>
+    <div>
+      <a href="https://www.sans.org/blog/" target="_blank" rel="noopener">SANS Blog</a>
+      <p>业内资深专家的趋势解读与技术文章，结合蓝队/红队视角，适合周末系统性阅读。</p>
+    </div>
+  </article>
+
+  <!-- NCSC 10 Steps -->
+  <article class="resource-card holo-card">
+    <img src="assets/ncsc.png" alt="NCSC 10 Steps"/>
+    <div>
+      <a href="https://www.ncsc.gov.uk/collection/10-steps-to-cyber-security" target="_blank" rel="noopener">NCSC: 10 Steps</a>
+      <p>英国国家网络安全中心的组织级安全十步法，帮助建立可执行的治理与技术控制框架。</p>
+    </div>
+  </article>
+</div>
