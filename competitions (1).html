@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rancho Cyber – Competitions</title>
+<link rel="stylesheet" href="style.css?v=1755324129"/></head>
+<body>
+
+<header class="header">
+  <div class="navbar">
+    <a href="index.html" class="logo">Rancho Cyber • ISC2</a>
+    <input type="checkbox" id="side-menu" class="side-menu"/>
+    <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a id="nav-home" href="index.html">Home</a></li>
+        <li><a id="nav-isc2" href="isc2.html">ISC2</a></li>
+        <li><a id="nav-resources" href="resources.html">Resources</a></li>
+        <li><a id="nav-competitions" href="competitions.html">Competitions</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1 class="neo-title">Competitions</h1>
+  <p class="lead">We enter <strong>CyberPatriot</strong> and the <strong>SoCal Cyber Cup</strong>. Below is what the rounds look like and how we train.</p>
+
+  <div class="grid cols-2">
+    <div class="card holo-card">
+      <h3>CyberPatriot (National Youth Cyber Defense)</h3>
+      <ul>
+        <li><strong>Format:</strong> Online qualifying → State/Regionals → National Finals.</li>
+        <li><strong>Focus:</strong> Windows/Linux hardening, services, firewall, updates, forensics.</li>
+        <li><strong>Team size:</strong> Up to 6 students (5 active + 1 alternate).</li>
+      </ul>
+      <p><a href="https://www.uscyberpatriot.org/" target="_blank" rel="noopener">Official site</a></p>
+    </div>
+    <div class="card holo-card">
+      <h3>SoCal Cyber Cup (SCCC)</h3>
+      <ul>
+        <li><strong>Format:</strong> Online qualifiers → in‑person finals (spring).</li>
+        <li><strong>Focus:</strong> Secure config, network defense, log analysis, forensics, teamwork.</li>
+        <li><strong>Event page:</strong> <a href="https://cyberskyline.com/events/socalccc" target="_blank" rel="noopener">Cyber Skyline – SCCC</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="practice" class="neo-title">Weekly Practice Plan</h2>
+  <p class="inline-note">Specific plans will be discussed offline. The public framework below keeps your original Mon/Wed/Fri flow and adds more daily content.</p>
+
+  <div class="week-grid">
+    <!-- Monday -->
+    <section class="week-day">
+      <h4>Mon • Fundamentals &amp; Hardening <span class="badge">Windows / Linux</span></h4>
+      <ul class="checklist">
+        <li>Accounts, permissions, services, logging (Windows &amp; Linux)</li>
+        <li>Baseline hardening: updates, UAC/Firewall, SSH/WinRM</li>
+        <li>Practice images: Win10/11 &amp; Ubuntu (VirtualBox/VMware)</li>
+      </ul>
+      <div class="meta">Kept from original: “Linux/Windows fundamentals”</div>
+    </section>
+
+    <!-- Tuesday -->
+    <section class="week-day">
+      <h4>Tue • Blue Team Labs <span class="badge">Detection</span></h4>
+      <ul class="checklist">
+        <li>Event &amp; telemetry: Sysmon + Windows Event, journalctl</li>
+        <li>Packet analysis: Wireshark triage of suspicious flows</li>
+        <li>Exercise: reconstruct intrusion timeline from IOCs</li>
+      </ul>
+    </section>
+
+    <!-- Wednesday -->
+    <section class="week-day">
+      <h4>Wed • Network &amp; Services <span class="badge">TCP/IP</span></h4>
+      <ul class="checklist">
+        <li>Fix common misconfig: SSH/Samba/HTTP/DB</li>
+        <li>FW &amp; routing: UFW, Windows Defender FW, NAT, ACL</li>
+        <li>Tools: nmap, netstat, ss, PowerShell Net*</li>
+      </ul>
+      <div class="meta">Kept from original: “Network & services”</div>
+    </section>
+
+    <!-- Thursday -->
+    <section class="week-day">
+      <h4>Thu • Web Security Sprint <span class="badge">OWASP</span></h4>
+      <ul class="checklist">
+        <li>SQLi, XSS, IDOR, SSRF, Auth bypass</li>
+        <li>Lab: PortSwigger challenges (team rotation)</li>
+        <li>Bonus: 1 reproducible PoC + defense write‑up</li>
+      </ul>
+    </section>
+
+    <!-- Friday -->
+    <section class="week-day">
+      <h4>Fri • Forensics &amp; IR <span class="badge">Triage</span></h4>
+      <ul class="checklist">
+        <li>Memory/disk: Volatility, strings, SIGMA rules</li>
+        <li>Windows: Sysinternals (Autoruns, TCPView, ProcMon)</li>
+        <li>CTI mapping: MITRE ATT&amp;CK &amp; incident playbook</li>
+      </ul>
+      <div class="meta">Kept from original: “Forensics & IR drills”</div>
+    </section>
+
+    <!-- Saturday -->
+    <section class="week-day">
+      <h4>Sat • Red vs Blue Scrimmage <span class="badge">Teamplay</span></h4>
+      <ul class="checklist">
+        <li>Simulated match: hardened image + staged IOCs</li>
+        <li>Red team constraints: low‑risk, school‑safe techniques</li>
+        <li>Retro: scoring (SLA, detections, false+/−)</li>
+      </ul>
+    </section>
+
+    <!-- Sunday -->
+    <section class="week-day">
+      <h4>Sun • Review &amp; Knowledge Base <span class="badge">Docs</span></h4>
+      <ul class="checklist">
+        <li>Errors log: command cheatsheet &amp; troubleshooting flows</li>
+        <li>Docs: push SOP / Playbook updates to repo</li>
+        <li>Light preview: publish next week’s key goals (details offline)</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <span>Built for students by Henry • <a href="competitions.html#practice">Weekly practice plan</a></span>
+    <span>Questions? <a href="mailto:1henrydeng@gmail.com">1henrydeng@gmail.com</a></span>
+  </div>
+</footer>
+<script>
+(function(){{
+  const file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const map = {{'index.html':'nav-home','isc2.html':'nav-isc2','resources.html':'nav-resources','competitions.html':'nav-competitions'}};
+  const id = map[file] || 'nav-home';
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+}})();
+</script>
+
+</body></html>
